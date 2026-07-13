@@ -1,0 +1,56 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: codeted-backend
+
+  # Active profile: override via SPRING_PROFILES_ACTIVE env variable
+  # Local development: dev | Production: prod
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/codeted}
+    username: ${DATABASE_USERNAME:codeted_user}
+    password: ${DATABASE_PASSWORD:codeted_password}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 30000
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    baseline-version: 0
+
+# Swagger / OpenAPI
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: alpha
+    tags-sorter: alpha
+
+# Application security — JWT
+app:
+  security:
+    jwt:
+      secret: ${JWT_SECRET:MzQ4OTM5ODQ3Mjk4NDczMjk4NzQyOTgzNzQ5Mjg3MzQ5ODI3NDM5ODI3NDM5ODI3NDM5ODc0OTI4NzM0OTgyNzQzOTgyNzQ=}
+      expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+      refresh-expiration-ms: ${JWT_REFRESH_EXPIRATION_MS:604800000}
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000}
