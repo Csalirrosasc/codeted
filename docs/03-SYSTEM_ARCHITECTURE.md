@@ -1,6 +1,6 @@
 # SYSTEM ARCHITECTURE
 
-Version: 0.1
+Version: 0.2
 
 ## Objetivo
 
@@ -8,10 +8,11 @@ Definir la arquitectura de alto nivel del sistema CodeTED.
 
 ## Arquitectura aprobada
 
-- Monolito modular.
-- Frontend separado en Next.js.
-- Backend REST en Spring Boot.
-- PostgreSQL como base de datos principal.
+- Monolito modular en backend
+- Frontend separado en Next.js
+- Backend REST en Spring Boot
+- PostgreSQL como base de datos principal
+- Docker Compose para desarrollo y produccion base
 
 ## Principios
 
@@ -24,4 +25,24 @@ Definir la arquitectura de alto nivel del sistema CodeTED.
 
 ## Estado actual
 
-La arquitectura objetivo está definida, pero la implementación aún se encuentra en fase base. Los módulos de negocio todavía no están completos.
+La arquitectura ya esta implementada y operativa como base de producto:
+
+- Frontend comercial y administrativo en Next.js 15
+- Backend Spring Boot 3.5 con JWT, refresh token y RBAC base
+- Persistencia PostgreSQL con migraciones Flyway
+- Modulos operativos de leads, blog, servicios, portafolio, clientes, proyectos y cotizaciones
+- Portal cliente conectado al backend
+- Configuracion de despliegue con `docker-compose.prod.yml`
+
+## Componentes
+
+- `frontend/`: experiencia publica, login, dashboard y portal cliente
+- `backend/`: API REST, seguridad, reglas de negocio y persistencia
+- `database/`: apoyo documental de datos
+- `docs/`: arquitectura, seguridad, base de datos y operacion
+- `planning/`: backlog, epicas, sprints y QA
+
+## Riesgos actuales
+
+- Falta smoke test final completo en contenedores
+- La salida a produccion publica todavia requiere secretos reales, HTTPS y QA manual
