@@ -108,7 +108,8 @@ Lee este orden para levantarlo en otra computadora:
 3. `docs/11-PRODUCTION_OPERATIONS.md`
 4. `docs/12-DEPLOYMENT_GUIDE.md`
 5. `docs/13-VPS_DEPLOYMENT.md`
-6. `planning/QA_CHECKLIST.md`
+6. `docs/14-NGINX_HTTPS_SETUP.md`
+7. `planning/QA_CHECKLIST.md`
 
 ## Notas
 

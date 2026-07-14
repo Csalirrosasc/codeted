@@ -12,7 +12,8 @@ Dejar una guia unica para levantar CodeTED en otra computadora o servidor.
 2. `docs/03-SYSTEM_ARCHITECTURE.md`
 3. `docs/11-PRODUCTION_OPERATIONS.md`
 4. `docs/13-VPS_DEPLOYMENT.md`
-5. `planning/QA_CHECKLIST.md`
+5. `docs/14-NGINX_HTTPS_SETUP.md`
+6. `planning/QA_CHECKLIST.md`
 
 ## Requisitos
 

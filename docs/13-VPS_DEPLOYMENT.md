@@ -20,7 +20,8 @@ Dejar el paso a paso minimo para desplegar CodeTED en un VPS Linux con Docker.
 1. `README.md`
 2. `docs/11-PRODUCTION_OPERATIONS.md`
 3. `docs/12-DEPLOYMENT_GUIDE.md`
-4. `planning/QA_CHECKLIST.md`
+4. `docs/14-NGINX_HTTPS_SETUP.md`
+5. `planning/QA_CHECKLIST.md`
 
 ## 1. Preparar el servidor
 
@@ -85,6 +86,10 @@ Necesitas:
 - publicar `app.tudominio.com` hacia `FRONTEND_PORT`
 - publicar `api.tudominio.com` hacia `BACKEND_PORT`
 - emitir certificados TLS
+
+Guia sugerida:
+
+- revisa `docs/14-NGINX_HTTPS_SETUP.md`
 
 ## 7. Actualizar despliegue
 
