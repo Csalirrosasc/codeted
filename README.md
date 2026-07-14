@@ -109,7 +109,8 @@ Lee este orden para levantarlo en otra computadora:
 4. `docs/12-DEPLOYMENT_GUIDE.md`
 5. `docs/13-VPS_DEPLOYMENT.md`
 6. `docs/14-NGINX_HTTPS_SETUP.md`
-7. `planning/QA_CHECKLIST.md`
+7. `docs/15-DUCKDNS_SINGLE_DOMAIN.md`
+8. `planning/QA_CHECKLIST.md`
 
 ## Notas
 
