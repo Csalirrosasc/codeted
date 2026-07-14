@@ -11,7 +11,8 @@ Dejar una guia unica para levantar CodeTED en otra computadora o servidor.
 1. `README.md`
 2. `docs/03-SYSTEM_ARCHITECTURE.md`
 3. `docs/11-PRODUCTION_OPERATIONS.md`
-4. `planning/QA_CHECKLIST.md`
+4. `docs/13-VPS_DEPLOYMENT.md`
+5. `planning/QA_CHECKLIST.md`
 
 ## Requisitos
 
@@ -40,6 +41,12 @@ En Windows PowerShell, si `cp` no funciona como alias:
 
 ```powershell
 Copy-Item .env.example .env
+```
+
+Para un servidor real, usa mejor:
+
+```bash
+cp .env.production.example .env
 ```
 
 ### 3. Ajustar valores reales
