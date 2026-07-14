@@ -23,6 +23,7 @@ Este documento resume el endurecimiento minimo recomendado antes de exponer Code
 - Reverse proxy con HTTPS
 - Rate limiting para login y contacto
 - Headers de seguridad en frontend y backend
+- Contextos Docker reducidos con `.dockerignore`
 - Logs centralizados
 - Backups de PostgreSQL
 - Monitoreo basico de CPU, memoria y disco

@@ -51,6 +51,8 @@ Configura como minimo:
 - `CORS_ALLOWED_ORIGINS`
 - `NEXT_PUBLIC_API_URL`
 - `NEXT_PUBLIC_SITE_URL`
+- `BACKEND_PORT`
+- `FRONTEND_PORT`
 
 ## Despliegue base con Docker
 
@@ -69,6 +71,16 @@ Nota:
 - Frontend: `http://localhost:3000`
 - Backend health: `http://localhost:8080/api/health`
 - Login: `http://localhost:3000/auth/login`
+
+Si `3000` o `8080` ya estan ocupados en tu maquina, cambia:
+
+- `FRONTEND_PORT=3001`
+- `BACKEND_PORT=8081`
+
+y alinea tambien:
+
+- `NEXT_PUBLIC_API_URL=http://localhost:8081/api`
+- `NEXT_PUBLIC_SITE_URL=http://localhost:3001`
 
 ## Usuario inicial
 

@@ -87,8 +87,27 @@ npm run dev
 ## Produccion con Docker Compose
 
 ```bash
-docker compose -f docker-compose.prod.yml --env-file .env up --build
+docker compose -f docker-compose.prod.yml --env-file .env up --build -d
 ```
+
+Si `3000` o `8080` ya estan ocupados, ajusta en `.env`:
+
+```bash
+BACKEND_PORT=8081
+FRONTEND_PORT=3001
+NEXT_PUBLIC_API_URL=http://localhost:8081/api
+NEXT_PUBLIC_SITE_URL=http://localhost:3001
+```
+
+## Guia de despliegue
+
+Lee este orden para levantarlo en otra computadora:
+
+1. `README.md`
+2. `docs/03-SYSTEM_ARCHITECTURE.md`
+3. `docs/11-PRODUCTION_OPERATIONS.md`
+4. `docs/12-DEPLOYMENT_GUIDE.md`
+5. `planning/QA_CHECKLIST.md`
 
 ## Notas
 
